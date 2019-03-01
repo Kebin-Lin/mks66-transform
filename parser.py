@@ -56,7 +56,7 @@ def parse_file( fname, points, transform, screen, color ):
                 matrix_mult(temp,transform)
             elif currCommand == "rotate":
                 temp = None
-                args[1] = 180 * int(args[1]) / math.pi
+                args[1] = math.pi * int(args[1]) / 180
                 if args[0] == "x":
                     temp = make_rotX(args[1])
                 elif args[0] == "y":
