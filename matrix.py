@@ -29,8 +29,8 @@ def make_rotX( theta ):
     curr = new_matrix()
     ident(curr)
     curr[1][1] = math.cos(theta)
-    curr[1][2] = -math.sin(theta)
-    curr[2][1] = math.sin(theta)
+    curr[1][2] = math.sin(theta)
+    curr[2][1] = -math.sin(theta)
     curr[2][2] = math.cos(theta)
     return curr
 
@@ -38,8 +38,8 @@ def make_rotY( theta ):
     curr = new_matrix()
     ident(curr)
     curr[0][0] = math.cos(theta)
-    curr[0][2] = math.sin(theta)
-    curr[2][0] = -math.sin(theta)
+    curr[0][2] = -math.sin(theta)
+    curr[2][0] = math.sin(theta)
     curr[2][2] = math.cos(theta)
     return curr
 
@@ -47,8 +47,8 @@ def make_rotZ( theta ):
     curr = new_matrix()
     ident(curr)
     curr[0][0] = math.cos(theta)
-    curr[0][1] = -math.sin(theta)
-    curr[1][0] = math.sin(theta)
+    curr[0][1] = math.sin(theta)
+    curr[1][0] = -math.sin(theta)
     curr[1][1] = math.cos(theta)
     return curr
 
