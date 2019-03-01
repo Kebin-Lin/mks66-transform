@@ -66,7 +66,9 @@ def parse_file( fname, points, transform, screen, color ):
                 matrix_mult(temp,transform)
             elif currCommand == "save":
                 clear_screen(screen)
-                draw_lines(points, screen, color)
+                temp = deepcopy(points)
+                fixMatrix(temp)
+                draw_lines(temp, screen, color)
                 save_extension(screen,args[0])
             currCommand = None
         else:
